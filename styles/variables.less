@@ -35,36 +35,17 @@
   font-weight: normal;
 }
 
+/* declare some basic font-families */
 @open-sans-stack: 'Open Sans', Calibri, Helvetica, Arial, sans-serif;
 @gentium-stack: 'Gentium Book Basic', Cambria, Georgia, Times, serif;
+@league-gothic-stack: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
 
-.league-gothic-stack {
-  font-family: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
-  font-weight: normal;
+.league-gothic {
+  font-family: @league-gothic-stack;
+  font-weight: normal; /* there aren't different weights, so this is important */
 }
-
-/* Color Palette */
-@ookb-pink:          rgba(236,64,121,1);
-@ookb-brown:         rgba(47,41,38,1);
-@ookb-gray:          rgba(132,132,120,1);
-@ookb-darkgray:      rgba(96,103,103,1);
-@ookb-lightgray:     rgba(194,211,186,1);
-
-@ookb-red:           rgba(183,80,81,1);
-@ookb-orange:        rgba(195,115,99,1);
-@ookb-yellow:        rgba(197,192,101,1);
-@ookb-green:         rgba(140,165,115,1);
-@ookb-blue:          rgba(157,178,176,1);
-@ookb-purple:        rgba(174,139,164,1);
-
 
 /** other general reusable classes/hacks **/
-.clearfix {
-  content: '';
-  display: table;
-  clear: both;
-}
-
 .hide-text {
   text-indent: 200%;
   white-space: nowrap;
@@ -91,20 +72,92 @@
           border-radius: @radius;
 }
 
-.left {
+/* floats and clears */
+.left,
+.floatleft,
+.float-left,
+.leftfloat,
+.left-float {
   float: left;
 }
-.right {
+
+.right,
+.floatright,
+.float-right,
+.rightfloat,
+.right-float {
   float: right;
 }
-.clear {
+
+.clear,
+.clearboth,
+.clear-both,
+.both-clear,
+.bothclear {
   clear: both;
 }
-.clearleft {
+.clearleft,
+.leftclear,
+.clear-left,
+.left-clear {
   clear: left;
 }
-.clearright {
+.clearright,
+.rightclear,
+.clear-right,
+.right-clear {
   clear: right;
+}
+
+.clearfix,
+.clear-fix,
+.cf,
+.group {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/* 
+  center, left and right align text.
+  it is my personal opinion that you should never use "text-align: justify;" on the web.
+  browsers aren't good enough at typesetting justified text.
+  I have not created those styles for that reason.
+*/
+
+.text-center,
+.textcenter,
+.center-text,
+.centertext,
+.align-center,
+.center-align,
+.aligncenter,
+.centeralign {
+  text-align: center;
+}
+
+.text-right,
+.right-text,
+.textright,
+.righttext,
+.align-right,
+.right-align,
+.alignright,
+.rightalign {
+  text-align: right;
+}
+
+.text-left,
+.left-text,
+.textleft,
+.lefttext,
+.align-left,
+.left-align,
+.alignleft,
+.leftalign {
+  text-align: left;
 }
 
 /* -----------------------------------------------------*/
