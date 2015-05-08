@@ -1,12 +1,38 @@
 * {
   position: relative;
+  /**/
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  /* type stuff */
+  /**/
+  -moz-font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -ms-font-feature-settings: "kern";
+  -o-font-feature-settings: "kern";
+  font-feature-settings: "kern";
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   background: black;
   color: white;
-  font-family: @open-sans-stack;
+  font: 20px/1.5 @open-sans-stack;
   font-weight: 400;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+a {
+  color: white;
+}
+
+header a,
+h1 a {
+  text-decoration: none;
 }
 
 /* Full Screen BG */
@@ -26,12 +52,23 @@ main {
   background-image: url('https://unsplash.it/2000/1500/?image=720');  // default to unsplash images, overide in the HTML with an inline style
 }
 
+// might need to do the images on "sections" instead of "main"
+// allow for more images that way??
+
 header .inner,
 main > section {
   position: absolute;
   bottom: 25%;
   right: 5em;
-  width: 50%;
+}
+
+header .inner {
+  width: 55%;
+}
+
+.inner p,
+section p {
+  font-weight: 300;
 }
 
 footer {
@@ -41,3 +78,80 @@ footer {
   padding: 1em 1em 2em;
 }
 
+/* Contact Section
+   **************************************/
+
+#contact {
+  width: 75%;
+}
+
+#contact .contact-details {
+  .floatleft;
+  width: ~'calc(100% / 3 * 1)';
+  padding: .5em;
+}
+
+#contact form {
+  .floatleft;
+  width: ~'calc(100% / 3 * 2)';
+  padding: .5em;
+}
+
+/* styling those forms */
+input, button, select, textarea {
+  font-family: @open-sans-stack;
+  font-size: inherit;
+  line-height: normal;
+}
+
+/** style placeholder text **/
+/* https://css-tricks.com/snippets/css/style-placeholder-text/ */
+::-webkit-input-placeholder {
+   color: white;
+  .transition-all(0.4s);
+}
+:focus::-webkit-input-placeholder {
+  color: black;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+  .transition-all(0.4s);
+}
+:focus::-moz-input-placeholder {
+  color: black;
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+  .transition-all(0.4s);
+}
+:focus:-ms-input-placeholder {
+  color: black;
+}
+
+input, textarea {
+  margin-bottom: .25em;
+}
+
+.fields input,
+.message textarea, 
+.message input {
+  background: rgba(0,0,0,0.15);
+  background-image: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  padding: 6px 12px;
+  width: 100%;
+  .transition-all(0.4s);
+}
+
+.fields input:focus,
+.message textarea:focus, 
+.message input:focus  {
+  color: black;
+  background: white;
+  border-color: white;
+}

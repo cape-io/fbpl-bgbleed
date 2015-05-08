@@ -4,7 +4,7 @@
 
 /* 1. @Font-Face — load my google fonts... */
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,300,600");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800");
 @import url("http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,400italic,700italic");
 
 /* 2. Load league gothic from my font server... */
@@ -70,6 +70,14 @@
   -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
           border-radius: @radius;
+}
+
+.transition-all(@timing) {
+  -webkit-transition: all @timing;
+  -moz-transition: all @timing;
+  -ms-transition: all @timing;
+  -o-transition: all @timing;
+  transition: all @timing;
 }
 
 /* floats and clears */
