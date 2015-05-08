@@ -1,6 +1,6 @@
-
-/* Full Screen BG */
-/* some helpful hints if you want to experiment: https://css-tricks.com/perfect-full-page-background-image/ & http://alistapart.com/article/supersize-that-background-please */
+* {
+  position: relative;
+}
 
 body {
   background: black;
@@ -9,6 +9,35 @@ body {
   font-weight: 400;
 }
 
-header {
+/* Full Screen BG */
+/* some helpful hints if you want to experiment: https://css-tricks.com/perfect-full-page-background-image/ & http://alistapart.com/article/supersize-that-background-please */
+header, main {
   .text-right;
+  height: 100vh;
+  width: 100vw;
+  /**/
+  background-image: url('https://scontent.xx.fbcdn.net/hphotos-xpf1/t31.0-8/1890436_875317132491326_2540284789519908799_o.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+main {
+  background-image: url('https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/t31.0-8/10959084_875314865824886_2765506294768641142_o.jpg');
+}
+
+header .inner,
+main > section {
+  position: absolute;
+  bottom: 25%;
+  right: 5em;
+  width: 50%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  padding: 1em 1em 2em;
+}
+
