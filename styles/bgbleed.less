@@ -64,41 +64,6 @@ footer {
   font-size: .9em;
 }
 
-/* styling those forms */
-input, button, select, textarea {
-  font-family: @open-sans-stack;
-  font-size: inherit;
-  line-height: normal;
-  width: 100%;
-  max-width: 100%;
-}
-
-/** style placeholder text **/
-/* https://css-tricks.com/snippets/css/style-placeholder-text/ */
-::-webkit-input-placeholder {
-   color: white;
-  .transition-all(0.4s);
-}
-:focus::-webkit-input-placeholder {
-  color: black;
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   color: white;  
-  .transition-all(0.4s);
-}
-:focus::-moz-input-placeholder {
-  color: black;
-}
-
-:-ms-input-placeholder {  
-   color: white;  
-  .transition-all(0.4s);
-}
-:focus:-ms-input-placeholder {
-  color: black;
-}
-
 input, textarea {
   margin-bottom: .25em;
 }
@@ -194,6 +159,32 @@ input, textarea {
 
   /* Contact Section
      **************************************/
+
+  /** style placeholder text **/
+  /* https://css-tricks.com/snippets/css/style-placeholder-text/ */
+  ::-webkit-input-placeholder {
+     color: white;
+    .transition-all(0.4s);
+  }
+  :focus::-webkit-input-placeholder {
+    color: black;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: white;  
+    .transition-all(0.4s);
+  }
+  :focus::-moz-input-placeholder {
+    color: black;
+  }
+
+  :-ms-input-placeholder {  
+     color: white;  
+    .transition-all(0.4s);
+  }
+  :focus:-ms-input-placeholder {
+    color: black;
+  }
 
   #contact {
     width: 75%;

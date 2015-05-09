@@ -277,6 +277,18 @@ sub {
 /* -----------------------------------------------------*/
 /* ------------->>> /end variables.less <<<-------------*/
 /* -----------------------------------------------------*/
+/* styling those forms */
+form input,
+form button,
+form select,
+form textarea {
+  font-family: 'Open Sans', Calibri, Helvetica, Arial, sans-serif;
+  font-size: inherit;
+  line-height: normal;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: .25em;
+}
 * {
   /**/
   -webkit-box-sizing: border-box;
@@ -332,53 +344,6 @@ main {
 footer {
   padding: 2em 1em;
   font-size: .9em;
-}
-/* styling those forms */
-input,
-button,
-select,
-textarea {
-  font-family: 'Open Sans', Calibri, Helvetica, Arial, sans-serif;
-  font-size: inherit;
-  line-height: normal;
-  width: 100%;
-  max-width: 100%;
-}
-/** style placeholder text **/
-/* https://css-tricks.com/snippets/css/style-placeholder-text/ */
-::-webkit-input-placeholder {
-  color: white;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
-}
-:focus::-webkit-input-placeholder {
-  color: black;
-}
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: white;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
-}
-:focus::-moz-input-placeholder {
-  color: black;
-}
-:-ms-input-placeholder {
-  color: white;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
-}
-:focus:-ms-input-placeholder {
-  color: black;
 }
 input,
 textarea {
@@ -465,6 +430,42 @@ textarea {
   }
   /* Contact Section
      **************************************/
+  /** style placeholder text **/
+  /* https://css-tricks.com/snippets/css/style-placeholder-text/ */
+  ::-webkit-input-placeholder {
+    color: white;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  :focus::-webkit-input-placeholder {
+    color: black;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  :focus::-moz-input-placeholder {
+    color: black;
+  }
+  :-ms-input-placeholder {
+    color: white;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  :focus:-ms-input-placeholder {
+    color: black;
+  }
   #contact {
     width: 75%;
   }
