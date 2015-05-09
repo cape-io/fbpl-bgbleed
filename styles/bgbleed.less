@@ -41,7 +41,7 @@ section p {
   font-weight: 300;
 }
 
-header, 
+header,
 main {
   background-image: url('https://ununsplash.imgix.net/photo-1429043794791-eb8f26f44081?fit=crop&fm=jpg&h=1250&q=75&w=1500&blend=44000000&bm=multiply'); // default to unsplash images, overide in the HTML with an inline style
   background-position: center center;
@@ -70,7 +70,7 @@ input, textarea {
 
 .btn-outline-inverse,
 .fields input,
-.message textarea, 
+.message textarea,
 .message input {
   background: rgba(0,0,0,0.15);
   background-image: none;
@@ -87,7 +87,7 @@ input, textarea {
 .btn-outline-inverse:focus,
 .btn-outline-inverse:active,
 .fields input:focus,
-.message textarea:focus, 
+.message textarea:focus,
 .message input:focus  {
   color: black;
   background: white;
@@ -99,15 +99,11 @@ input, textarea {
   height: 2em;
 }
 
-.message textarea {
-  height: 4.25em;
-}
-
 .contact-details {
   margin-bottom: 1.5em;
 }
 
-/** 
+/**
   Above here are "mobile first" styles
   meaning that everything works on the skiniest view
   we will add/edit/change styles only for wider views with media queries below this point
@@ -126,7 +122,7 @@ input, textarea {
   /* Full Screen BG */
   /* some helpful hints if you want to experiment: https://css-tricks.com/perfect-full-page-background-image/ & http://alistapart.com/article/supersize-that-background-please */
   header, main {
-    .text-right; 
+    .text-right;
     height: 100vh;
     width: 100vw;
     /**/
@@ -171,15 +167,15 @@ input, textarea {
   }
 
   ::-moz-placeholder {  /* Firefox 19+ */
-     color: white;  
+     color: white;
     .transition-all(0.4s);
   }
   :focus::-moz-input-placeholder {
     color: black;
   }
 
-  :-ms-input-placeholder {  
-     color: white;  
+  :-ms-input-placeholder {
+     color: white;
     .transition-all(0.4s);
   }
   :focus:-ms-input-placeholder {
@@ -194,7 +190,7 @@ input, textarea {
     .contact-details {
       .floatleft;
       width: ~'calc(100% / 3 * 1)';
-      padding: .5em;   
+      padding: .5em;
 
       address {
         margin-top: 1em;
