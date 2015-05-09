@@ -15,15 +15,16 @@
   text-rendering: optimizeLegibility;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background: black;
   color: white;
-  font: 20px/1.5 @open-sans-stack;
+  font: 16px/1.5 @open-sans-stack;
   font-weight: 400;
-}
-
-h1 {
-  font-size: 2em;
 }
 
 a {
@@ -35,74 +36,32 @@ h1 a {
   text-decoration: none;
 }
 
-/* Full Screen BG */
-/* some helpful hints if you want to experiment: https://css-tricks.com/perfect-full-page-background-image/ & http://alistapart.com/article/supersize-that-background-please */
-header, main {
-  .text-right;
-  height: 100vh;
-  width: 100vw;
-  /**/
+.inner p,
+section p {
+  font-weight: 300;
+}
+
+header, 
+main {
   background-image: url('https://unsplash.it/2000/1500/?image=724'); // default to unsplash images, overide in the HTML with an inline style
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
+  /**/
+  padding: 7em 1em;
+  border-bottom: 1em solid white;
+}
+
+header {
+  border-top: 1em solid white;
 }
 
 main {
   background-image: url('https://unsplash.it/2000/1500/?image=720');  // default to unsplash images, overide in the HTML with an inline style
 }
 
-// might need to do the images on "sections" instead of "main"
-// allow for more images that way??
-
-header .inner,
-main > section {
-  position: absolute;
-  bottom: 25%;
-  right: 5em;
-}
-
-header .inner {
-  width: 55%;
-}
-
-.inner p,
-section p {
-  font-weight: 300;
-}
-
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  padding: 1em 1em 2em;
-}
-
-/* Contact Section
-   **************************************/
-
-#contact {
-  width: 75%;
-}
-
-#contact {
-  .contact-details {
-    .floatleft;
-    width: ~'calc(100% / 3 * 1)';
-    padding: .5em;   
-  }
-  form {
-    .floatleft;
-    width: ~'calc(100% / 3 * 2)';
-    padding: .5em;
-    
-    .fields,
-    .message {
-      .floatleft;
-      width: ~'calc(100% / 2)';
-      padding: .5em;
-    }
-  }
+  padding: 2em 1em;
+  font-size: .9em;
 }
 
 /* styling those forms */
@@ -144,6 +103,7 @@ input, textarea {
   margin-bottom: .25em;
 }
 
+.btn-outline-inverse,
 .fields input,
 .message textarea, 
 .message input {
@@ -158,10 +118,120 @@ input, textarea {
   .transition-all(0.4s);
 }
 
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active,
 .fields input:focus,
 .message textarea:focus, 
 .message input:focus  {
   color: black;
   background: white;
   border-color: white;
+}
+
+.fields input,
+.message input {
+  height: 2em;
+}
+
+.message textarea {
+  height: 4.25em;
+}
+
+.contact-details {
+  margin-bottom: 1.5em;
+}
+
+/** 
+  Above here are "mobile first" styles
+  meaning that everything works on the skiniest view
+  we will add/edit/change styles only for wider views with media queries below this point
+**/
+/******/
+
+@media screen and (min-width: 768px) {
+  header {
+    font-size: 1.33em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  /* Full Screen BG */
+  /* some helpful hints if you want to experiment: https://css-tricks.com/perfect-full-page-background-image/ & http://alistapart.com/article/supersize-that-background-please */
+  header, main {
+    .text-right; 
+    height: 100vh;
+    width: 100vw;
+    /**/
+    background-attachment: fixed;
+    /**/
+    padding: 0;
+    border: none;
+  }
+
+  // might need to do the images on "sections" instead of "main"
+  // allow for more images that way??
+
+  header .inner,
+  main > section {
+    position: absolute;
+    bottom: 25%;
+    right: 5em;
+  }
+
+  header .inner {
+    width: 55%;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    padding: 1em 1em 2em;
+  }
+
+  /* Contact Section
+     **************************************/
+
+  #contact {
+    width: 75%;
+  }
+
+  #contact {
+    .contact-details {
+      .floatleft;
+      width: ~'calc(100% / 3 * 1)';
+      padding: .5em;   
+
+      address {
+        margin-top: 1em;
+      }
+      address, p {
+        font-size: .9em;
+        line-height: 1.4;
+        margin-bottom: .25em;
+      }
+    }
+    form {
+      .floatleft;
+      width: ~'calc(100% / 3 * 2)';
+      padding: .5em;
+
+      .fields,
+      .message {
+        .floatleft;
+        width: ~'calc(100% / 2)';
+        padding: .5em;
+      }
+    }
+  }
+
+  form .message button {
+    width: ~'calc(200% + 1em)';
+    max-width: none;
+    margin-left: ~'calc((100% + 1em) * -1)';
+    cursor: pointer;
+  }
 }
